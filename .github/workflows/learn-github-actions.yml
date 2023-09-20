@@ -5,8 +5,11 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - run: "echo Hello Testbash"
-      - name: run tests
-        run: npm test
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: cd src/webapp/api    
+      - run: npm install 
+      - run: npm run test
 
-      
