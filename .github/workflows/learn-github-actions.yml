@@ -6,9 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: "echo Hello Testbash"
-      - name: check into repo
-        run: cd src/webapp/api 
-      - name: check into repo
+      - name: run tests
         run: npm test
 
       
