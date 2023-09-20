@@ -1,8 +1,10 @@
-name: Run pipeline hello test bash
-run-name: Hello Testbash
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - run: "echo Hello Testbash"  
+      - run: echo "Hello TestBash!"
+      - name: Run Playwright Tests
+        run : npm run pipeline:teardown
