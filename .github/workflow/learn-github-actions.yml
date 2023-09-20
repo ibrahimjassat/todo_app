@@ -1,0 +1,8 @@
+name: Run pipeline hello test bash
+run-name: Hello Testbash
+on: [push]
+jobs:
+  say hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "echo Hello Testbash"
